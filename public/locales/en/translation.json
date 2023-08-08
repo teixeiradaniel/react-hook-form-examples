@@ -1,0 +1,8 @@
+{
+  "fields": {
+    "name": "Name",
+    "phone": "Phone",
+    "gender": "Gender",
+    "nationality": "Nationality"
+  }
+}

@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Formulario from "./components/Formulario";
+import FormularioAvancado from "./components/FormularioAvancado";
+import Home from "./components/Home";
+// import {useTranslation} from "react-i18next";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // const { t,i18n } = useTranslation();
+    // const changeLanguage = (lng: string) => {
+    //     i18n.changeLanguage(lng).then();
+    // };
+
+    {/*<div>*/}
+    {/*<button onClick={() => changeLanguage('en')}>EN</button>*/}
+    {/*<button onClick={() => changeLanguage('pt-BR')}>PT-BR</button>*/}
+    {/*</div>*/}
+    const pathname = window.location.pathname;
+
+    if (pathname === '/formulario') {
+        return <Formulario />;
+    }
+
+    if (pathname === '/formulario-avancado') {
+        return <FormularioAvancado />;
+    }
+
+    return <Home />;
+
 }
 
 export default App;
